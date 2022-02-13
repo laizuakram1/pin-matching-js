@@ -24,4 +24,8 @@ document.getElementById('key-pad').addEventListener('click', function (event){
    const inputNumbers = document.getElementById('input-numbers');
    const previousNumbers = inputNumbers.value;
    inputNumbers.value = previousNumbers + keyNumbers;
+   if(keyNumbers == 'C' || keyNumbers == '<'){
+       inputNumbers.value = '';
+   }
+   
 })
