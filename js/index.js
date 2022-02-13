@@ -17,3 +17,11 @@ function generatePin(){
     document.getElementById('generate-pin-input').value = pin;
 
 }
+
+// pin match and bubbling
+document.getElementById('key-pad').addEventListener('click', function (event){
+   const keyNumbers = event.target.innerText;
+   const inputNumbers = document.getElementById('input-numbers');
+   const previousNumbers = inputNumbers.value;
+   inputNumbers.value = previousNumbers + keyNumbers;
+})
